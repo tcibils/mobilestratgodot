@@ -8,6 +8,7 @@
 Tutorial used: https://gamedevacademy.org/godot-strategy-game-tutorial/
 Tiles used: https://www.kenney.nl/assets/medieval-rts
 
-## Reading Garmin Data is working in python - see below with Streamlit display
-![image](https://github.com/user-attachments/assets/62001b0f-4b7a-4ce4-b176-5837f3a6bb0d)
+## Garmin Data + Google AI
+Can read Garmin data with python, pass it to Google AI to get summaries, and display everything in Streamlit - see below
+![image](https://github.com/user-attachments/assets/b5164a09-4562-47ca-ad87-7bea91d58447)
 
