@@ -87,6 +87,19 @@ func end_turn ():
 	ui.on_end_turn()
 
 func _ready ():
+	
+	var url = "https://www.strava.com/api/v3/athlete"
+	
+	# Replace ABCDEF by the "Request token" available here: https://www.strava.com/settings/api
+	var headers = ["Authorization: Bearer "]
+	$HTTPRequest.request(url, headers, HTTPClient.METHOD_GET)
+	$HTTPRequest.request_completed.connect(_on_request_completed)
+	
 	# updates the UI when the game starts
 	ui.update_resource_text()
 	ui.on_end_turn()
+
+func _on_request_completed(result, response_code, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	print(json["firstname"])
+	print(json["lastname"])
